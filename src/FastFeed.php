@@ -229,7 +229,7 @@ class FastFeed implements FastFeedInterface
         $response = $this->http->send($url, 'guzzle',
             array('User-Agent' => self::USER_AGENT.' v.'.self::VERSION));
 
-        if ('OK' !== $response->getReasonPhrase()) {
+        if ($response && 'OK' !== $response->getReasonPhrase()) {
             $this->log('fail with '.$response->getStatusCode().' http code in url "'.$url.'" ');
             return;
         }
