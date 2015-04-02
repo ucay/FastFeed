@@ -12,7 +12,7 @@ matrix:
 
 notifications:
   email:
-    - daniel@desarrolla2.com
+    - ulumuddin.cy@gmail.com
 
 before_script:
   - cp phpunit.xml.dist phpunit.xml
